@@ -23,15 +23,22 @@
       />
     </header>
     <div class="container">
-      <input class="input" type="text" placeholder="Pesquisar..." />
+      <input
+        class="input"
+        type="text"
+        placeholder="Pesquisar..."
+        onkeyup="searchButton(event)"
+      />
       <div class="movies-container">
         <img
+          onclick="previousButton()"
           class="btn-prev"
           src="./assets/seta-esquerda-preta.svg"
           alt="Seta esquerda"
         />
         <div class="movies"></div>
         <img
+          onclick="nextButton()"
           class="btn-next"
           src="./assets/seta-direita-preta.svg"
           alt="Seta direita"
@@ -68,5 +75,6 @@
         <div class="modal__average"></div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
