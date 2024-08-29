@@ -167,6 +167,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: cover;
 }
 
 .highlight__info {
@@ -300,6 +301,7 @@ body {
 
 .modal__genres {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
