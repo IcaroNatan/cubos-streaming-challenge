@@ -1,3 +1,4 @@
+const bodyElement = document.querySelector("body");
 const moviesElement = document.querySelector(".movies");
 const searchInputElement = document.querySelector(".input");
 const highlightElement = document.querySelector(".highlight");
@@ -194,11 +195,11 @@ const movieModal = async (idMovie) => {
     modalImage.src = data.backdrop_path;
     modalDescription.textContent = data.overview;
     modalAverage.textContent = data.vote_average.toFixed(1);
-
-    const spanModal = document.createElement("span");
-    spanModal.classList.add("modal__genre");
+    modalGenres.innerHTML = "";
 
     for (let genre of data.genres) {
+      const spanModal = document.createElement("span");
+      spanModal.classList.add("modal__genre");
       spanModal.textContent = genre.name;
       modalGenres.appendChild(spanModal);
     }
@@ -209,4 +210,8 @@ const movieModal = async (idMovie) => {
 
 const closeModal = () => {
   modalElement.classList.add("hidden");
+};
+
+const changeTheme = () => {
+  bodyElement.classList.toggle("dark-theme");
 };
