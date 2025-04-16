@@ -1,4 +1,16 @@
-![](https://i.imgur.com/xG74tOh.png)
+# Streaming Service - Frontend Challenge
+
+> **Sobre**: Este projeto foi desenvolvido como solução para o desafio do módulo 7 do curso da **[Cubos Academy](https://cubos.academy/)**, simulando um serviço de streaming (Netflix-like) com integração à API do TMDB.
+
+<img src="https://i.imgur.com/xG74tOh.png" alt="Preview do projeto" width="600"/>
+
+## 🚀 Funcionalidades Implementadas
+- [x] Catálogo de filmes com paginação
+- [x] Busca dinâmica por título
+- [x] Destaque do "Filme do Dia"
+- [x] Modal detalhado ao clicar em um filme
+- [x] Toggle entre temas light/dark
+- [x] Design responsivo conforme [Figma original](https://www.figma.com/file/AL6hZ3Lq16Uj8mw1o4BzAK/Desafio-front-academy-2)
 
 # Desafio | Front-end - Módulo 7
 
