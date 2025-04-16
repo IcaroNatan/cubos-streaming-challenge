@@ -1,6 +1,11 @@
 # Streaming Service - Frontend Challenge
 
+## Créditos  
+- Baseado no [desafio-frontend-m07-dds-t14](https://github.com/cubos-academy/desafio-frontend-m07-dds-t14) da Cubos Academy.
+
+  
 > **Sobre**: Este projeto foi desenvolvido como solução para o desafio do módulo 7 do curso da **[Cubos Academy](https://cubos.academy/)**, simulando um serviço de streaming (Netflix-like) com integração à API do TMDB.
+
 
 <img src="https://i.imgur.com/xG74tOh.png" alt="Preview do projeto" width="600"/>
 
