@@ -25,7 +25,7 @@ let movieId;
 const movieVizualization = async () => {
   try {
     const response = await fetch(
-      "https://tmdb-proxy.cubos-academy.workers.dev/3/discover/movie?language=pt-BR&include_adult=false"
+      "https://tmdb-proxy.cubos-academy.workers.dev/3/discover/movie?language=pt-BR&include_adult=false",
     );
     const data = await response.json();
 
@@ -109,7 +109,7 @@ const nextButton = () => {
 const searchButton = async () => {
   try {
     searchInputElement.addEventListener("keyup", async (event) => {
-      if (event.keyCode === 13) {
+      if (event.key === "Enter") {
         const query = searchInputElement.value.trim();
 
         if (query.length === 0) {
@@ -119,7 +119,7 @@ const searchButton = async () => {
         }
 
         const response = await fetch(
-          `https://tmdb-proxy.cubos-academy.workers.dev/3/search/movie?language=pt-BR&include_adult=false**&query=${query}`
+          `https://tmdb-proxy.cubos-academy.workers.dev/3/search/movie?language=pt-BR&include_adult=false&query=${query}`,
         );
 
         const data = await response.json();
@@ -146,10 +146,10 @@ const searchButton = async () => {
 const movieOfTheDay = async () => {
   try {
     const generalResponse = await fetch(
-      "https://tmdb-proxy.cubos-academy.workers.dev/3/movie/436969?language=pt-BR"
+      "https://tmdb-proxy.cubos-academy.workers.dev/3/movie/436969?language=pt-BR",
     );
     const videoResponse = await fetch(
-      "https://tmdb-proxy.cubos-academy.workers.dev/3/movie/436969/videos?language=pt-BR"
+      "https://tmdb-proxy.cubos-academy.workers.dev/3/movie/436969/videos?language=pt-BR",
     );
 
     const generalData = await generalResponse.json();
@@ -162,7 +162,7 @@ const movieOfTheDay = async () => {
       .map((genre) => genre.name)
       .join(", ");
     highlightLaunch.textContent = new Date(
-      generalData.release_date
+      generalData.release_date,
     ).toLocaleDateString("pt-BR", {
       year: "numeric",
       month: "long",
@@ -186,7 +186,7 @@ movieOfTheDay();
 const movieModal = async (idMovie) => {
   try {
     const response = await fetch(
-      `https://tmdb-proxy.cubos-academy.workers.dev/3/movie/${idMovie}?language=pt-BR`
+      `https://tmdb-proxy.cubos-academy.workers.dev/3/movie/${idMovie}?language=pt-BR`,
     );
 
     const data = await response.json();
